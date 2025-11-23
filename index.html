@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gautier Fayard | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <canvas id="art-canvas"></canvas>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <div class="menu-overlay">
+        <div class="menu-close hover-trigger" data-cursor-text="FERMER">✕</div>
+        <nav class="menu-links">
+            <a href="#home" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_home">ACCUEIL</a>
+            <a href="#profile" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_about">PROFIL</a>
+            <a href="#education" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_education">FORMATION</a>
+            <a href="#experience" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_experience">EXPÉRIENCE</a>
+            <a href="#skills" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_skills">COMPÉTENCES</a>
+            <a href="CV_GAUTIER_FAYARD.pdf" target="_blank" class="menu-link cv-link hover-trigger" data-cursor-text="PDF" data-i18n="nav_cv">MON CV</a>
+            <a href="#contact" class="menu-link hover-trigger" data-cursor-text="MAIL" data-i18n="nav_contact">CONTACT</a>
+        </nav>
+        <div class="menu-footer">
+            <span>GAUTIER FAYARD © 2025</span>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-left">
+            <a href="#" class="logo">GF<span class="dot">.</span></a>
+            <div class="lang-switch-header hover-trigger" data-cursor-text="LANG">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <span class="sep">/</span>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="CV_GAUTIER_FAYARD.pdf" target="_blank" class="btn-cv cv-link hover-trigger" data-cursor-text="PDF" data-i18n="btn_cv">CV 2025</a>
+            <div class="menu-trigger hover-trigger" data-cursor-text="MENU">
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="name-title">
+                    <div class="line-wrapper"><span class="word">GAUTIER</span></div>
+                    <div class="line-wrapper"><span class="word outline">FAYARD</span></div>
+                </h1>
+                <p class="job-title" data-i18n="job_title">B.U.T INFORMATIQUE</p>
+            </div>
+            <div class="hero-footer">
+                <span data-i18n="location">Basé à Annecy / Lyon</span>
+                <div class="scroll-indicator">SCROLL ↓</div>
+            </div>
+        </section>
+
+        <section id="profile" class="section-pad">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_profile">À PROPOS DE MOI</h2>
+                
+                <div class="intro-text-block">
+                    <p class="text-content p1">Yo, je suis <span class="highlight">Gautier Fayard</span>. Étudiant en <strong>2<sup>e</sup> année de B.U.T Informatique</strong> à l'IUT d'Annecy.</p>
+                    <p class="text-content mt p2">Actuellement à la <strong>recherche d'un stage de 2ème année</strong>. Passionné par le développement, je combine rigueur technique et créativité.</p>
+                    <p class="text-content mt p3">Je conçois des applications web et logicielles (C#, Python, Web) en m'appuyant sur des bases solides en algorithmique et gestion de données.</p>
+                </div>
+
+                <div class="grid-2 mt-large">
+                    <div class="card-box hover-trigger" data-cursor-text="INFO">
+                        <h3 data-i18n="card_infos">Infos & Contact</h3>
+                        <ul class="custom-list">
+                            <li><i data-lucide="map-pin"></i> <span>Chaponnay (69), France</span></li>
+                            <li><i data-lucide="cake"></i> <span>18 Jan 2006 (19 ans)</span></li>
+                            <li><i data-lucide="phone"></i> <a href="tel:+33665020540">06 65 02 05 40</a></li>
+                            <li><i data-lucide="mail"></i> <a href="mailto:Gautier.fayard@etu.univ-smb.fr" class="break-mail">Gautier.fayard@etu.univ-smb.fr</a></li>
+                            <li><i data-lucide="car"></i> <span data-i18n="driver_license">Permis B</span></li>
+                        </ul>
+                    </div>
+                    <div class="card-box hover-trigger" data-cursor-text="LOVE">
+                        <h3 data-i18n="card_passions">Passions & Soft Skills</h3>
+                        <ul class="custom-list">
+                            <li><i data-lucide="bike"></i> <span data-i18n="hobby_cycling">Cyclisme (Niveau National)</span></li>
+                            <li><i data-lucide="video"></i> <span data-i18n="hobby_video">Création Audiovisuelle</span></li>
+                            <li><i data-lucide="heart-handshake"></i> <span data-i18n="hobby_volunteer">Bénévolat Associatif</span></li>
+                            <li class="separator"></li>
+                            <li><i data-lucide="check-circle"></i> <span data-i18n="soft_organized">Organisé & Ponctuel</span></li>
+                            <li><i data-lucide="check-circle"></i> <span data-i18n="soft_autonomy">Autonome & Responsable</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section-pad">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_education">FORMATION</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date">2024 — <span data-i18n="date_current">Actuel</span></div>
+                        <div class="content hover-trigger" data-cursor-text="IUT">
+                            <h3 data-i18n="edu_but_title">B.U.T. Informatique</h3>
+                            <p class="place">IUT Annecy — Université Savoie Mont-Blanc</p>
+                            <p class="desc" data-i18n="edu_but_desc">2ème année. Parcours Conception et Développement d'Applications.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2024</div>
+                        <div class="content hover-trigger" data-cursor-text="BAC">
+                            <h3 data-i18n="edu_bac_title">Baccalauréat Général</h3>
+                            <p class="place">Lycée Saint Charles, Vienne</p>
+                            <p class="desc" data-i18n="edu_bac_desc">Spécialités Mathématiques et NSI. Mention Assez Bien.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section-pad">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_experience">EXPÉRIENCE</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date">2025</div>
+                        <div class="content hover-trigger" data-cursor-text="JOB">
+                            <h3 data-i18n="exp_hosp_title">Emploi Saisonnier — Hôpital</h3>
+                            <p class="place">Hôpital Médipole, Villeurbanne</p>
+                            <p class="desc" data-i18n="exp_hosp_desc">Tri d'archives et logistique.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2022 — 2024</div>
+                        <div class="content hover-trigger" data-cursor-text="JOB">
+                            <h3 data-i18n="exp_leclerc_title">Emploi Saisonnier — Leclerc</h3>
+                            <p class="place">Chaponnay</p>
+                            <p class="desc" data-i18n="exp_leclerc_desc">Mise en rayon, gestion réserve, étiquetage électronique.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2023</div>
+                        <div class="content hover-trigger" data-cursor-text="JOB">
+                            <h3 data-i18n="exp_city_title">Emploi Saisonnier — Mairie</h3>
+                            <p class="place">Mairie de Chaponnay</p>
+                            <p class="desc" data-i18n="exp_city_desc">Entretien espaces verts, installation mobilier urbain.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section-pad">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_tech_skills">COMPÉTENCES TECHNIQUES</h2>
+                
+                <div class="skills-circles-grid">
+                    <div class="circle-skill hover-trigger" data-cursor-text="C#">
+                        <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+                        <div class="inner-text"><span>C#</span><small>.NET / WPF</small></div>
+                    </div>
+                    <div class="circle-skill hover-trigger" data-cursor-text="WEB">
+                        <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+                        <div class="inner-text"><span>WEB</span><small>HTML/CSS/JS</small></div>
+                    </div>
+                    <div class="circle-skill hover-trigger" data-cursor-text="SQL">
+                        <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="80, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+                        <div class="inner-text"><span>DATA</span><small>SQL / Postgres</small></div>
+                    </div>
+                    <div class="circle-skill hover-trigger" data-cursor-text="PY">
+                        <svg viewBox="0 0 36 36" class="circular-chart"><path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /><path class="circle" stroke-dasharray="75, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" /></svg>
+                        <div class="inner-text"><span>PYTHON</span><small>Algo</small></div>
+                    </div>
+                </div>
+
+                <div class="skills-detailed">
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_cat_dev">Frameworks & Bibliothèques</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag">Laravel</span><span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">React</span><span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">WPF</span><span class="tech-tag">XAML</span>
+                            <span class="tech-tag">Tailwind</span><span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_cat_tools">Environnement & Outils</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag">Git / GitHub</span><span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Linux</span><span class="tech-tag">Visual Studio</span>
+                            <span class="tech-tag">Postman</span><span class="tech-tag">Nginx</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_cat_manage">Gestion de Projet & Méthodes</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag highlight-tag">Agile</span><span class="tech-tag highlight-tag">Scrum</span>
+                            <span class="tech-tag">MVC</span><span class="tech-tag">UML</span>
+                            <span class="tech-tag">Trello</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3 data-i18n="skill_cat_design">Design & CMS</h3>
+                        <div class="skill-tags">
+                            <span class="tech-tag">Figma</span><span class="tech-tag">Canva</span>
+                            <span class="tech-tag">WordPress</span><span class="tech-tag">UI / UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work" id="work">
+            <div class="work-header">
+                <h2 data-i18n="section_portfolio">PORTFOLIO</h2>
+                <span class="counter">01 — 04</span>
+            </div>
+            <div class="work-slider">
+                <div class="work-track">
+                    
+                    <div class="work-item hover-trigger" data-cursor-text="EN COURS">
+                        <div class="work-img"><img src="fifa.jpg" alt="Site FIFA"></div>
+                        <div class="work-info">
+                            <h3 data-i18n="proj_fifa_title">Site Web FIFA</h3>
+                            <p class="desc" data-i18n="proj_fifa_short">Laravel / Fullstack</p>
+                            <ul class="project-details">
+                                <li><i data-lucide="calendar"></i> <span data-i18n="proj_fifa_date">Date : En cours</span></li>
+                                <li><i data-lucide="package"></i> <span data-i18n="proj_fifa_type">Type : Site Web</span></li>
+                                <li><i data-lucide="cpu"></i> <span data-i18n="proj_fifa_tech">Tech : Laravel, PHP</span></li>
+                                <li><i data-lucide="user-cog"></i> <span data-i18n="proj_fifa_context">Contexte : Universitaire</span></li>
+                                <li><i data-lucide="activity"></i> <span data-i18n="proj_fifa_state">État : En dév</span></li>
+                            </ul>
+                            <div class="btn-access" data-i18n="btn_wip">En cours</div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="work-item hover-trigger" data-cursor-text="VOIR">
+                        <div class="work-img"><img src="portfolio.jpg" alt="Mon Portfolio"></div>
+                        <div class="work-info">
+                            <h3 data-i18n="proj_pf_title">Mon Portfolio</h3>
+                            <p class="desc" data-i18n="proj_pf_short">Design / WebGL</p>
+                            <ul class="project-details">
+                                <li><i data-lucide="calendar"></i> <span data-i18n="proj_pf_date">Date : Jan 2025</span></li>
+                                <li><i data-lucide="package"></i> <span data-i18n="proj_pf_type">Type : Site Vitrine</span></li>
+                                <li><i data-lucide="cpu"></i> <span data-i18n="proj_pf_tech">Tech : JS, Three.js</span></li>
+                                <li><i data-lucide="user-cog"></i> <span data-i18n="proj_pf_context">Contexte : Personnel</span></li>
+                                <li><i data-lucide="check-circle"></i> <span data-i18n="proj_pf_state">État : En ligne</span></li>
+                            </ul>
+                            <div class="btn-access" data-i18n="btn_access">Accéder</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/Jules-Cadoux/SAE201" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB">
+                        <div class="work-img"><img src="nicolas.png" alt="App Gestion Nicolas"></div>
+                        <div class="work-info">
+                            <h3 data-i18n="proj_nicolas_title">Gestion Nicolas</h3>
+                            <p class="desc" data-i18n="proj_nicolas_short">Gestion Logistique</p>
+                            <ul class="project-details">
+                                <li><i data-lucide="calendar"></i> <span data-i18n="proj_nicolas_date">Date : Juin 2025</span></li>
+                                <li><i data-lucide="package"></i> <span data-i18n="proj_nicolas_type">Type : App Windows</span></li>
+                                <li><i data-lucide="cpu"></i> <span data-i18n="proj_nicolas_tech">Tech : C#, WPF</span></li>
+                                <li><i data-lucide="user-cog"></i> <span data-i18n="proj_nicolas_context">Contexte : Universitaire</span></li>
+                                <li><i data-lucide="archive"></i> <span data-i18n="proj_nicolas_state">État : Archivé</span></li>
+                            </ul>
+                            <div class="btn-access" data-i18n="btn_access">Accéder</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/LeGoat42/SAE-PROG" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB">
+                        <div class="work-img"><img src="potironator.jpg" alt="Jeu Potironator"></div>
+                        <div class="work-info">
+                            <h3 data-i18n="proj_potiron_title">Jeu Potironator</h3>
+                            <p class="desc" data-i18n="proj_potiron_short">Jeu Vidéo Arcade</p>
+                            <ul class="project-details">
+                                <li><i data-lucide="calendar"></i> <span data-i18n="proj_potiron_date">Date : Déc. 2024</span></li>
+                                <li><i data-lucide="package"></i> <span data-i18n="proj_potiron_type">Type : Jeu Vidéo</span></li>
+                                <li><i data-lucide="cpu"></i> <span data-i18n="proj_potiron_tech">Tech : C#, IHM</span></li>
+                                <li><i data-lucide="user-cog"></i> <span data-i18n="proj_potiron_context">Contexte : Universitaire</span></li>
+                                <li><i data-lucide="archive"></i> <span data-i18n="proj_potiron_state">État : Archivé</span></li>
+                            </ul>
+                            <div class="btn-access" data-i18n="btn_access">Accéder</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="section-pad">
+            <div class="container">
+                <h2 class="section-title" data-i18n="section_references">RÉFÉRENCES</h2>
+                <div class="grid-2">
+                    <div class="card-box hover-trigger" data-cursor-text="PROF">
+                        <h3>Nathalie Gruson</h3>
+                        <p class="role" data-i18n="ref_prof_prog">Professeur de Programmation</p>
+                        <p class="place">IUT Annecy</p>
+                        <a href="mailto:nathalie.gruson@etu.univ-smb.fr" class="ref-link"><i data-lucide="mail"></i> nathalie.gruson@etu.univ-smb.fr</a>
+                    </div>
+                    <div class="card-box hover-trigger" data-cursor-text="PROF">
+                        <h3>Benoit Diard</h3>
+                        <p class="role" data-i18n="ref_prof_prog">Professeur de Programmation</p>
+                        <p class="place">IUT Annecy</p>
+                        <a href="mailto:benoit.diar@etu.univ-smb.fr" class="ref-link"><i data-lucide="mail"></i> benoit.diar@etu.univ-smb.fr</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact" class="footer">
+            <div class="footer-content">
+                <h2 data-i18n="footer_title">Un projet ou un stage ?</h2>
+                <p data-i18n="footer_subtitle">Je suis disponible et à l'écoute de nouvelles opportunités.</p>
+                <a href="mailto:gautier.fayard@etu.univ-smb.fr" class="email-link hover-trigger">gautier.fayard@etu.univ-smb.fr</a>
+                <div class="socials">
+                    <a href="https://linkedin.com/in/gautier-fayard-29b520266" target="_blank" class="social-link hover-trigger" data-cursor-text="LINK">LINKEDIN</a>
+                    <a href="https://github.com/LeGoat42" target="_blank" class="social-link hover-trigger" data-cursor-text="CODE">GITHUB</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 GAUTIER FAYARD</span>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
