@@ -61,7 +61,7 @@ const cvLinks = document.querySelectorAll('.cv-link');
 
 const texts = {
     fr: {
-        cv_file: "CV_GAUTIER_FAYARD.pdf",
+        cv_file: "assets/CV_GAUTIER_FAYARD.pdf",
         nav_home: "ACCUEIL", nav_about: "PROFIL", nav_education: "FORMATION", nav_experience: "EXPÉRIENCE", nav_skills: "COMPÉTENCES", nav_cv: "MON CV", nav_contact: "CONTACT",
         btn_cv: "CV 2025",
         job_title: "B.U.T INFORMATIQUE",
@@ -99,6 +99,11 @@ const texts = {
         skill_cat_manage: "Gestion de Projet & Méthodes",
         skill_cat_design: "Design & CMS",
         section_projects: "PORTFOLIO",
+        
+        filter_tech: "TECH :", filter_all: "Tout", filter_web: "Web", filter_soft: "Logiciel",
+        filter_context: "CONTEXTE :", filter_univ: "Univ.", filter_perso: "Perso.",
+        filter_state: "ÉTAT :", filter_wip: "En cours", filter_online: "En ligne", filter_archived: "Archivé",
+        
         proj_fifa_title: "Site Web FIFA", proj_fifa_short: "Laravel / Fullstack",
         proj_fifa_date: "Date : En cours", proj_fifa_type: "Type : Site Web", proj_fifa_tech: "Tech : Laravel, PHP", proj_fifa_context: "Contexte : Universitaire", proj_fifa_state: "État : En dév",
         proj_pf_title: "Mon Portfolio", proj_pf_short: "Design / WebGL",
@@ -115,7 +120,7 @@ const texts = {
         btn_wip: "En cours"
     },
     en: {
-        cv_file: "CV English.pdf",
+        cv_file: "assets/CV English.pdf",
         nav_home: "HOME", nav_about: "PROFILE", nav_education: "EDUCATION", nav_experience: "EXPERIENCE", nav_skills: "SKILLS", nav_cv: "MY RESUME", nav_contact: "CONTACT",
         btn_cv: "RESUME 2025",
         job_title: "B.U.T COMPUTER SCIENCE",
@@ -153,6 +158,11 @@ const texts = {
         skill_cat_manage: "Project Management & Methods",
         skill_cat_design: "Design & CMS",
         section_projects: "PORTFOLIO",
+        
+        filter_tech: "TECH:", filter_all: "All", filter_web: "Web", filter_soft: "Software",
+        filter_context: "CONTEXT:", filter_univ: "Univ.", filter_perso: "Personal",
+        filter_state: "STATUS:", filter_wip: "WIP", filter_online: "Online", filter_archived: "Archived",
+        
         proj_fifa_title: "FIFA Website", proj_fifa_short: "Laravel / Fullstack",
         proj_fifa_date: "Date: In Progress", proj_fifa_type: "Type: Website", proj_fifa_tech: "Tech: Laravel, PHP", proj_fifa_context: "Context: University", proj_fifa_state: "Status: In Dev",
         proj_pf_title: "My Portfolio", proj_pf_short: "Design / WebGL",

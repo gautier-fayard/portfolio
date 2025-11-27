@@ -28,7 +28,7 @@
             <a href="#education" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_education">FORMATION</a>
             <a href="#experience" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_experience">EXPÉRIENCE</a>
             <a href="#skills" class="menu-link hover-trigger" data-cursor-text="GO" data-i18n="nav_skills">COMPÉTENCES</a>
-            <a href="CV_GAUTIER_FAYARD.pdf" target="_blank" class="menu-link cv-link hover-trigger" data-cursor-text="PDF" data-i18n="nav_cv">MON CV</a>
+            <a href="assets/CV_GAUTIER_FAYARD.pdf" target="_blank" class="menu-link cv-link hover-trigger" data-cursor-text="PDF" data-i18n="nav_cv">MON CV</a>
             <a href="#contact" class="menu-link hover-trigger" data-cursor-text="MAIL" data-i18n="nav_contact">CONTACT</a>
         </nav>
         <div class="menu-footer">
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="header-right">
-            <a href="CV_GAUTIER_FAYARD.pdf" target="_blank" class="btn-cv cv-link hover-trigger" data-cursor-text="PDF" data-i18n="btn_cv">CV 2025</a>
+            <a href="assets/CV_GAUTIER_FAYARD.pdf" target="_blank" class="btn-cv cv-link hover-trigger" data-cursor-text="PDF" data-i18n="btn_cv">CV 2025</a>
             <div class="menu-trigger hover-trigger" data-cursor-text="MENU">
                 <span class="line"></span>
                 <span class="line"></span>
@@ -229,21 +229,21 @@
             
             <div class="filter-wrapper">
                 <div class="filter-group">
-                    <span class="filter-label">TECH:</span>
-                    <button class="filter-btn active" data-filter="all">Tout</button>
-                    <button class="filter-btn" data-filter="web">Web</button>
-                    <button class="filter-btn" data-filter="soft">Logiciel</button>
+                    <span class="filter-label" data-i18n="filter_tech">TECH :</span>
+                    <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Tout</button>
+                    <button class="filter-btn" data-filter="web" data-i18n="filter_web">Web</button>
+                    <button class="filter-btn" data-filter="soft" data-i18n="filter_soft">Logiciel</button>
                 </div>
                 <div class="filter-group">
-                    <span class="filter-label">CONTEXTE:</span>
-                    <button class="filter-btn" data-filter="univ">Univ.</button>
-                    <button class="filter-btn" data-filter="perso">Perso.</button>
+                    <span class="filter-label" data-i18n="filter_context">CONTEXTE :</span>
+                    <button class="filter-btn" data-filter="univ" data-i18n="filter_univ">Univ.</button>
+                    <button class="filter-btn" data-filter="perso" data-i18n="filter_perso">Perso.</button>
                 </div>
                 <div class="filter-group">
-                    <span class="filter-label">ÉTAT:</span>
-                    <button class="filter-btn" data-filter="wip">En cours</button>
-                    <button class="filter-btn" data-filter="online">En ligne</button>
-                    <button class="filter-btn" data-filter="archived">Archivé</button>
+                    <span class="filter-label" data-i18n="filter_state">ÉTAT :</span>
+                    <button class="filter-btn" data-filter="wip" data-i18n="filter_wip">En cours</button>
+                    <button class="filter-btn" data-filter="online" data-i18n="filter_online">En ligne</button>
+                    <button class="filter-btn" data-filter="archived" data-i18n="filter_archived">Archivé</button>
                 </div>
             </div>
 
@@ -251,7 +251,7 @@
                 <div class="work-track">
                     
                     <div class="work-item hover-trigger" data-cursor-text="EN COURS" data-tech="web" data-context="univ" data-state="wip">
-                        <div class="work-img"><img src="fifa.jpg" alt="Site FIFA"></div>
+                        <div class="work-img"><img src="assets/fifa.jpg" alt="Site FIFA"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_fifa_title">Site Web FIFA</h3>
                             <p class="desc" data-i18n="proj_fifa_short">Laravel / Fullstack</p>
@@ -267,7 +267,7 @@
                     </div>
 
                     <a href="#" class="work-item hover-trigger" data-cursor-text="VOIR" data-tech="web" data-context="perso" data-state="online">
-                        <div class="work-img"><img src="portfolio.jpg" alt="Mon Portfolio"></div>
+                        <div class="work-img"><img src="assets/portfolio.jpg" alt="Mon Portfolio"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_pf_title">Mon Portfolio</h3>
                             <p class="desc" data-i18n="proj_pf_short">Design / WebGL</p>
@@ -283,7 +283,7 @@
                     </a>
 
                     <a href="https://github.com/Jules-Cadoux/SAE201" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB" data-tech="soft" data-context="univ" data-state="archived">
-                        <div class="work-img"><img src="nicolas.png" alt="App Gestion Nicolas"></div>
+                        <div class="work-img"><img src="assets/nicolas.png" alt="App Gestion Nicolas"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_nicolas_title">Gestion Nicolas</h3>
                             <p class="desc" data-i18n="proj_nicolas_short">Gestion Logistique</p>
@@ -298,8 +298,8 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/gautier-fayard/SAE-PROG" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB" data-tech="soft" data-context="univ" data-state="archived">
-                        <div class="work-img"><img src="potironator.jpg" alt="Jeu Potironator"></div>
+                    <a href="https://github.com/LeGoat42/SAE-PROG" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB" data-tech="soft" data-context="univ" data-state="archived">
+                        <div class="work-img"><img src="assets/potironator.jpg" alt="Jeu Potironator"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_potiron_title">Jeu Potironator</h3>
                             <p class="desc" data-i18n="proj_potiron_short">Jeu Vidéo Arcade</p>
