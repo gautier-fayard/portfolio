@@ -341,6 +341,46 @@ body.hovering .cursor-outline {
     color: var(--text);
 }
 
+.filter-wrapper {
+    padding: 0 3rem;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-label {
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dim);
+    margin-right: 5px;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-family: var(--font-body);
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--accent);
+    color: #064e3b;
+    border-color: var(--accent);
+}
+
 .work-track {
     display: flex;
     gap: 4rem;
@@ -357,6 +397,10 @@ body.hovering .cursor-outline {
     display: flex;
     flex-direction: column;
     transition: 0.3s;
+}
+
+.work-item.hidden {
+    display: none;
 }
 
 .work-item:hover {

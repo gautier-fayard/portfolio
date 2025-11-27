@@ -226,10 +226,31 @@
                 <h2 data-i18n="section_portfolio">PORTFOLIO</h2>
                 <span class="counter">01 — 04</span>
             </div>
+            
+            <div class="filter-wrapper">
+                <div class="filter-group">
+                    <span class="filter-label">TECH:</span>
+                    <button class="filter-btn active" data-filter="all">Tout</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="soft">Logiciel</button>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">CONTEXTE:</span>
+                    <button class="filter-btn" data-filter="univ">Univ.</button>
+                    <button class="filter-btn" data-filter="perso">Perso.</button>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">ÉTAT:</span>
+                    <button class="filter-btn" data-filter="wip">En cours</button>
+                    <button class="filter-btn" data-filter="online">En ligne</button>
+                    <button class="filter-btn" data-filter="archived">Archivé</button>
+                </div>
+            </div>
+
             <div class="work-slider">
                 <div class="work-track">
                     
-                    <div class="work-item hover-trigger" data-cursor-text="EN COURS">
+                    <div class="work-item hover-trigger" data-cursor-text="EN COURS" data-tech="web" data-context="univ" data-state="wip">
                         <div class="work-img"><img src="fifa.jpg" alt="Site FIFA"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_fifa_title">Site Web FIFA</h3>
@@ -245,7 +266,7 @@
                         </div>
                     </div>
 
-                    <a href="#" class="work-item hover-trigger" data-cursor-text="VOIR">
+                    <a href="#" class="work-item hover-trigger" data-cursor-text="VOIR" data-tech="web" data-context="perso" data-state="online">
                         <div class="work-img"><img src="portfolio.jpg" alt="Mon Portfolio"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_pf_title">Mon Portfolio</h3>
@@ -261,7 +282,7 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/Jules-Cadoux/SAE201" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB">
+                    <a href="https://github.com/Jules-Cadoux/SAE201" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB" data-tech="soft" data-context="univ" data-state="archived">
                         <div class="work-img"><img src="nicolas.png" alt="App Gestion Nicolas"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_nicolas_title">Gestion Nicolas</h3>
@@ -277,7 +298,7 @@
                         </div>
                     </a>
 
-                    <a href="https://github.com/LeGoat42/SAE-PROG" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB">
+                    <a href="https://github.com/gautier-fayard/SAE-PROG" target="_blank" class="work-item hover-trigger" data-cursor-text="GITHUB" data-tech="soft" data-context="univ" data-state="archived">
                         <div class="work-img"><img src="potironator.jpg" alt="Jeu Potironator"></div>
                         <div class="work-info">
                             <h3 data-i18n="proj_potiron_title">Jeu Potironator</h3>

@@ -1,4 +1,3 @@
-// 1. SHADER (Fond animé)
 const setupArt = () => {
     const canvas = document.getElementById('art-canvas');
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
@@ -57,7 +56,6 @@ const setupArt = () => {
 };
 setupArt();
 
-// 2. TRADUCTION & LOGIQUE
 const langBtns = document.querySelectorAll('.lang-btn');
 const cvLinks = document.querySelectorAll('.cv-link');
 
@@ -70,7 +68,6 @@ const texts = {
         location: "Basé à Annecy / Lyon",
         section_profile: "À PROPOS DE MOI",
         
-        // TEXTES DE PRÉSENTATION (HTML)
         p1: "Bonjour, je suis <span class='highlight'>Gautier Fayard</span>. Étudiant en <strong>2<sup>e</sup> année de B.U.T Informatique</strong> à l'IUT d'Annecy.",
         p2: "Actuellement à la <strong>recherche d'un stage de 2ème année</strong>. Passionné par le développement, je combine rigueur technique et créativité.",
         p3: "Je conçois des applications web et logicielles (C#, Python, Web) en m'appuyant sur des bases solides en algorithmique et gestion de données.",
@@ -125,7 +122,6 @@ const texts = {
         location: "Based in Annecy / Lyon",
         section_profile: "ABOUT ME",
         
-        // TEXTES EN
         p1: "Hello, I'm <span class='highlight'>Gautier Fayard</span>. <strong>2nd year Computer Science student</strong> at IUT Annecy.",
         p2: "Currently looking for a <strong>2nd-year internship</strong>. Passionate about development, I combine technical rigor with creativity.",
         p3: "I design web and software applications (C#, Python, Web) relying on a strong foundation in algorithms and data management.",
@@ -182,16 +178,13 @@ langBtns.forEach(btn => {
         
         const content = texts[lang];
         
-        // LIEN CV
         cvLinks.forEach(link => link.setAttribute('href', content.cv_file));
 
-        // TRADUCTION GENERALE (Ceux qui ont data-i18n)
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if(content[key]) el.innerText = content[key];
         });
 
-        // TRADUCTION SPÉCIALE POUR LES PARAGRAPHES AVEC HTML (p1, p2, p3)
         const p1 = document.querySelector('.text-content.p1');
         const p2 = document.querySelector('.text-content.p2');
         const p3 = document.querySelector('.text-content.p3');
@@ -202,7 +195,6 @@ langBtns.forEach(btn => {
     });
 });
 
-// 3. ANIMATIONS ET FONCTIONNEMENT GLOBAL
 lucide.createIcons();
 
 const menuTrigger = document.querySelector('.menu-trigger');
@@ -252,6 +244,44 @@ document.querySelectorAll('.hover-trigger').forEach(el => {
     el.addEventListener('mouseleave', () => {
         document.body.classList.remove('hovering');
         outline.innerText = '';
+    });
+});
+
+const filterBtns = document.querySelectorAll('.filter-btn');
+const workItems = document.querySelectorAll('.work-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filterValue = btn.getAttribute('data-filter');
+        const parentGroup = btn.parentElement;
+
+        parentGroup.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        document.querySelectorAll('.filter-group').forEach(group => {
+            if (group !== parentGroup) {
+                group.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                group.querySelector('[data-filter="all"]')?.classList.add('active');
+            }
+        });
+
+        workItems.forEach(item => {
+            if (filterValue === 'all') {
+                item.classList.remove('hidden');
+            } else {
+                const tech = item.getAttribute('data-tech');
+                const context = item.getAttribute('data-context');
+                const state = item.getAttribute('data-state');
+
+                if (tech === filterValue || context === filterValue || state === filterValue) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            }
+        });
+
+        ScrollTrigger.refresh();
     });
 });
 
